@@ -1,4 +1,3 @@
-Vue.component('tableunit', {
 <template>
   <v-simple-table
     fixed-header
@@ -16,10 +15,7 @@ Vue.component('tableunit', {
         </tr>
       </thead>
       <tbody>
-        <tr
-          v-for="item in desserts"
-          :key="item.name"
-        >
+        <tr v-for="item in desserts" :key="item.name">
           <td>{{ item.name }}</td>
           <td>{{ item.calories }}</td>
         </tr>
@@ -31,9 +27,11 @@ Vue.component('tableunit', {
 <script>
 
   export default {
+    name: 'tableunit',
     data () {
       return {
         desserts: [
+          /*
           {
             name: 'Frozen Yogurt',
             calories: 159,
@@ -74,10 +72,11 @@ Vue.component('tableunit', {
             name: 'KitKat',
             calories: 518,
           },
+          */
         ],
       }
     },
   }
 
 </script>
-})
+
